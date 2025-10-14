@@ -1,0 +1,45 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.alllooks_btn,.allitems{
+    position: fixed;
+    bottom: 0;
+    z-index: 500;
+    font-size: spFont(22);
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    padding: spCalc(20) 0;
+    line-height: 1;
+    cursor: pointer;
+    span{
+        transform: scale(1,1);
+        transition: all .3s linear;
+    }
+    &:hover{
+        span{
+            transform: scale(0.9,0.9);
+        }
+    }
+    
+    @include pc{
+        width: fit-content;
+        top: 50%;
+        bottom: unset;
+        transform: translateY(-50%);
+        background: none;
+        font-size: pcFont(22);
+    }
+}
+
+.alllooks_btn{
+    @include pc{
+        left: 0;
+        margin-left: pcCalc(100);
+    }
+}
+.allitems{
+    right: 0;
+    margin-right: pcCalc(100);
+}

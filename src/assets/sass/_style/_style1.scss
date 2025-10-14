@@ -1,0 +1,64 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.style_1{
+    margin-top: spCalc(62);
+    .style1-wrap{
+        display: flex;
+        width: 100%;
+        .style1-1,.style1-2{
+            width: 50%;
+        }   
+    }
+    .style1-3{
+        width: 100%;
+        padding-top: spCalc(171);
+        position: relative;
+        .style-ph{
+            width: spCalc(550);
+            margin: 0 auto;
+        }
+        .item_detail{
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0{
+                top: spCalc(80);
+                right: spCalc(20);
+            };
+        }
+    }
+
+    @include pc{
+        margin-top: pc(82);
+        display: flex;
+        gap: pc(105);
+        .style1-wrap{
+            width: pc(1010);
+
+        }
+        .style1-3{
+                width: pc(905);
+                padding: pc(90) pc(105) 0 0;
+                position: relative;
+                .style-ph{
+                    width: auto;
+                    margin: 0;
+                }
+                .item_detail{
+                    width: calc(320 / 905) * 100%;
+                    max-width: 160px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    margin: 0{
+                        top: 0;
+                        right: 0;
+                    };
+                }
+            }
+    }
+}
+
+

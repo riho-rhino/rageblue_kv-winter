@@ -1,0 +1,210 @@
+
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.bora-wrap{
+    display: flex;
+    .bora{
+        line-height: 0;
+        width: 80px;
+    }
+    @include pc{
+        .bora{
+            width: 130px;
+        }
+    }
+}
+
+.bora-wrap_1{
+    margin: spCalc(200) spCalc(40) 0 0;
+    justify-content: right;
+
+    .bora_1{
+        margin-right: spCalc(29);
+    }
+    .bora_2{
+        margin-top: spCalc(27);
+    }
+    @include pc{
+        margin: pc(200) pc(0) 0 0;
+        .bora_1{
+            margin-right: pc(29);
+        }
+        .bora_2{
+            margin-top: pc(21);
+        }
+    }
+}
+
+.bora-wrap_2{
+    margin: spCalc(200) spCalc(40) 0 0;
+    justify-content: right;
+
+    .bora_1{
+        margin-right: spCalc(29);
+    }
+    .bora_2{
+        margin-top: spCalc(27);
+    }
+    @include pc{
+        margin: pc(342) 0 0 0;
+    }
+}
+
+.bora-wrap_3{
+    margin: spCalc(200) spCalc(30) 0 0;
+    justify-content: right;
+    .bora_7{
+        margin-right: spCalc(30);   
+    }
+    .bora_8{
+        margin-top: spCalc(27);
+    }
+    @include pc{
+        margin: pc(200) 0 0 0;
+        .bora_7{
+            margin-right: pc(30);   
+        }
+        .bora_8{
+            margin-top: pc(25);
+        }
+    }
+}
+
+.bora-wrap_4{
+    margin: spCalc(160) auto 0;
+    justify-content: center;
+    .bora_10{
+        margin-right: spCalc(46);   
+    }
+    .bora_11{
+        margin-right: spCalc(13);   
+    }
+    @include pc{
+        margin: pc(300) auto 0;
+        .bora_10{
+            margin-top: pc(39);   
+            margin-right: pc(46);   
+        }
+        .bora_11{
+            margin-right: pc(13);   
+        }
+        .bora_12{
+            margin-top: pc(63);   
+        }
+    }
+}
+
+.bora-wrap_5{
+    margin: spCalc(200) spCalc(30) 0 auto;
+    justify-content: right;
+    .bora_13{
+        margin: spCalc(113) spCalc(-33) 0 0;
+    }
+    .bora_14{
+        margin-right: spCalc(-38);
+    }
+    .bora_15{
+        margin-top: spCalc(51);
+    }
+    @include pc{
+        margin: pc(200) 0 0 auto;
+        justify-content: right;
+        .bora_13{
+            margin: pc(108) pc(-30) 0 0;
+        }
+        .bora_14{
+            margin-right: pc(-30);
+        }
+        .bora_15{
+            margin-top: pc(50);
+        }        
+    }
+}
+
+
+.bora-wrap_6{
+    margin-top: spCalc(200);
+    .bora_16{
+        margin: 0 spCalc(30);
+    }
+    .bora_17{
+        margin-top: spCalc(26);
+    }
+    @include pc{
+        margin-top: pc(300);
+        .bora_16{
+            margin: 0 pc(30) 0 0;
+        }
+        .bora_17{
+            margin-top: pc(26);
+        }
+    }
+}
+
+.bora-wrap_7{
+    margin-top: spCalc(200);
+    justify-content: center;
+    .bora_19{
+        margin-right: spCalc(30);
+    }
+    .bora_20{
+        margin-top: spCalc(26);
+    }
+    @include pc{
+        margin-top: pc(300);
+        .bora_19{
+            margin-right: pc(30);
+        }
+        .bora_20{
+            margin-top: pc(26);
+        }
+    }
+}
+
+.bora-wrap_8{
+    justify-content: right;
+    margin-right: spCalc(50);
+    .bora_22{
+        margin: spCalc(161) spCalc(-88) 0 0;
+    }
+    .bora_23{
+        margin-right: spCalc(-20);
+        position: relative;
+        z-index: 5;
+    }
+    .bora_24{
+        margin-top: spCalc(50);
+        position: relative;
+        z-index: 1;
+    }
+    @include pc{
+        margin-right: pc(254);
+        margin-top: pc(-250);
+        .bora_22{
+            margin: pc(270) pc(-198) 0 0;
+        }
+        .bora_23{
+            margin-right: pc(-20);
+        }
+        .bora_24{
+            margin-top: pc(50);
+
+        }        
+    }
+}
+
+.bora-wrap_9{
+    justify-content: center;
+    margin: spCalc(210) 0 spCalc(200);
+    .bora_25{
+        margin-top: spCalc(24);
+    }
+    @include pc{
+        margin: pc(300) 0;
+        .bora_25{
+            margin-top: pc(27);
+        }
+    }
+}

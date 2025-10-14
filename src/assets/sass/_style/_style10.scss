@@ -1,0 +1,20 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.style_10{
+    margin-top: spCalc(160);
+    .style10-wrap{
+        display: flex;
+    }
+    .item_detail{
+        margin: spCalc(10) 0 0 spCalc(20); 
+    }
+    @include pc{
+        margin: pc(300) auto 0;
+        width: pc(1600);
+        .item_detail{
+            margin: pc(10) 0 0 0; 
+        }        
+    }
+}

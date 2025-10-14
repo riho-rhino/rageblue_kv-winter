@@ -1,0 +1,29 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.style_2{
+    margin-top: spCalc(160);
+    .item_detail{
+        margin: 0{
+            top: spCalc(10);
+            left: spCalc(20);
+        };
+    }
+    @include pc{
+        margin-top: pc(300);
+        width: 100%;
+        .style2-wrap{
+            display: flex;
+        }
+        .style-ph{
+            width: 50%;
+        }
+        .item_detail{
+        margin: 0{
+            top: pc(10);
+            left: 0;
+        };
+    }
+    }
+}

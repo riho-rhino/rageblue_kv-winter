@@ -1,0 +1,28 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.style_8{
+    .style8-wrap{
+        width: spCalc(550);
+        margin: spCalc(100) auto 0;
+        position: relative;
+        .style8-2{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }   
+    .item_detail{
+        margin: spCalc(10) auto 0;
+    }
+    @include pc{
+        .style8-wrap{
+            width: pc(800);
+            margin: pc(200) auto 0;
+        }   
+        .item_detail{
+            margin: pc(10) auto 0;
+        }
+    }
+}

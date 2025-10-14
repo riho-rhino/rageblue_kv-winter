@@ -1,5 +1,21 @@
 @use './_reset';
-@use './_mixin' as m;
-
-// modeuls
-@use './_modules/_test';
+@use './_mixin' as *;
+@use './_common' as c;
+@use './_modules/_mv';
+@use './_modules/_header';
+@use './_modules/_main';
+@use './_modules/_bora';
+@use './_modules/_item';
+@use './_modules/_footer';
+@use './_modules/_fixed';
+@use './_modules/_modal';
+@use './_style/_style1';
+@use './_style/_style2';
+@use './_style/_style3';
+@use './_style/_style4';
+@use './_style/_style5';
+@use './_style/_style6';
+@use './_style/_style7';
+@use './_style/_style8';
+@use './_style/_style9';
+@use './_style/_style10';

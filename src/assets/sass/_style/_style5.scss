@@ -1,0 +1,29 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.style_5{
+   margin-top: spCalc(160); 
+   .item_detail{
+    position: relative;
+    z-index: 10;
+    margin-left: spCalc(20); 
+    a{
+        border-bottom: solid 0.9px c.$main;
+    }
+   }
+   .style5-1{
+    margin-top: spCalc(-20);
+    position: relative;
+    z-index: 1;
+   }
+   @include pc{
+    .style5-wrap{
+        display: flex;
+        margin-top: pc(-20);
+    }
+    .style5-1{
+        margin-top: 0;
+    }
+   }
+}

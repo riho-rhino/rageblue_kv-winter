@@ -1,0 +1,39 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.style_9{
+    margin-top: spCalc(200);
+    position: relative;
+    .item_detail{
+        position: relative;
+        margin: 0 spCalc(20) spCalc(-20) auto;
+        z-index: 10;
+    }
+    .style9-wrap{
+        position: relative;
+        z-index: 1;
+        .style9-2{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    @include pc{
+        margin-top: pc(300);
+        padding-bottom: pc(90);
+        .item_detail{
+            position: absolute;
+            margin: 0 pc(20) 0 0;
+            bottom: 0;
+            right: 0;
+            
+        }
+        .style9-wrap{
+            display: flex;
+            .style9-2{
+                position: inherit;
+            }
+        }
+    }
+}

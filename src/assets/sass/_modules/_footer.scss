@@ -1,0 +1,62 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+
+.credit{
+    font-size: spFont(22);
+    margin-left: spCalc(40);
+    line-height: 1.5;
+    @include pc{
+        font-size: pcFont(22);
+        margin-left: pcCalc(357);
+    }
+
+}
+
+.sns-list{
+    display: flex;
+    margin:spCalc(80) 0 0 spCalc(40);
+    align-items: center;
+    vertical-align: middle;
+    justify-content: left;
+    gap: spCalc(40);
+    .x{
+        width: spCalc(35.7);
+    }
+    .insta{
+        width: spCalc(34);
+    }
+    .line{
+        width: spCalc(34);
+    }
+    .tiktok{
+        width: spCalc(29);
+    }
+    @include pc{
+        font-size: pcFont(22);
+        margin:pcCalc(80) 0 0 pcCalc(357);
+        gap: pcCalc(40);
+        .x{
+            width: pcCalc(35.7);
+        }
+        .insta{
+            width: pcCalc(34);
+        }
+        .line{
+            width: pcCalc(34);
+        }
+        .tiktok{
+            width: pcCalc(29);
+        }
+    }
+}
+
+.copy{
+    margin:spCalc(30) 0 spCalc(100) spCalc(40);
+    font-size: spFont(22);
+    @include pc{
+        font-size: pcFont(22);
+        margin:pcCalc(30) 0 pcCalc(200) pcCalc(357);
+    }
+}

@@ -1,0 +1,67 @@
+@use './_reset';
+@use './_mixin' as *;
+
+$spw : 786;
+$pcw : 2880;
+
+
+$main:#E10000;
+$sub: #222222;
+
+
+body{
+    color: #222222;
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -0.03em;
+    &.noscroll{
+        overflow: hidden;
+    }
+}
+
+
+.sp{
+    display: block;
+    @include pc{
+        display: none;
+    }
+}
+.pc{
+    display: none;
+    @include pc{
+        display: block;
+    }
+}
+
+a{
+    cursor: pointer;
+}
+
+.fadein{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform .4s ease, opacity .4s ease;
+    overflow: hidden;
+    &.in{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hel_l{
+font-family: "helvetica-lt-pro", sans-serif;
+font-weight: 300;
+font-style: normal;
+}
+.hel_r{
+font-family: "helvetica-lt-pro", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+.hel_b{
+font-family: "helvetica-lt-pro", sans-serif;
+font-weight: 700;
+font-style: normal;
+}

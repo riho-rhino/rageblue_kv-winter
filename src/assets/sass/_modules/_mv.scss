@@ -1,0 +1,97 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.mv_wrap{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.pc_mv{
+  display: none;
+  @include pc{
+    display: flex;
+    height: 100vh;
+  }
+  .pc_left,.pc_right{
+    line-height: 0;
+    width: 50%;
+    position: relative;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.pc_txt-wrap{
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0{
+    top: calc(60 / 1367) * 100%;
+    right: calc(60 / 1367) * 100%;
+  };
+  h1{
+    writing-mode: vertical-rl;
+    line-height: 1;
+    font-size: min(pcFont(22),11px); 
+  }
+  h2{
+    width: 10px;
+    line-height: 1;
+  }
+}
+
+.sp_mv{
+  display: block;
+  position: relative;
+  height: 100vh;
+  @include pc{
+    display: none;
+  }
+  .mv_1,.mv_2{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .mv_2{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .sp_txt-wrap{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0{
+      top: spCalc(30);
+      right: spCalc(30);
+    };
+    h1{
+      font-size: spFont(22);
+      line-height: 1;
+      writing-mode: vertical-rl;
+    }
+    h2{
+      width: 10px;
+      line-height: 0;
+    }
+  }
+}
+
+
+

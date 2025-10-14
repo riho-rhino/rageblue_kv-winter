@@ -1,3 +1,11 @@
-<img src="<%= rootURL %>" alt="">
 
-<script src="<%= rootURL %>assets/js/index.js"></script>
+<%- include('./_contents/_mv.ejs') %>
+<%- include('./_contents/_header.ejs') %>
+<main class="main">
+    <%- include('./_contents/_main.ejs') %>
+</main>
+<%- include('./_contents/_fixed.ejs') %>
+<%- include('./_contents/_modal.ejs') %>
+<%- include('./_contents/_foot.ejs') %>
+
+<script src="<%= rootURL %>/assets/js/index.js"></script>

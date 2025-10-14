@@ -1,0 +1,100 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+body{
+    overflow: hidden;
+}
+
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 800;
+    overflow-y: scroll;
+
+    .modal_looks{
+        overflow: scroll;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 10;
+        li{
+            width: 50%;
+            margin-top: spCalc(40);
+        }
+    }
+    .look_inner{
+        color: #000;
+    }
+    .look_num{
+        font-size: spFont(20);
+    }
+    @include pc{
+        .modal_looks{
+            width: pcCalc(2020);
+            margin: 0 auto;
+            li{
+                width: calc(505 / 2020) * 100%;
+                margin-top: pcCalc(60);
+            }
+        }
+        .look_num{
+            font-size: pcFont(20);
+        }
+    }
+}
+
+.looks_1,.looks_3,.looks_5,.looks_7,.looks_9{
+    .look_num{
+        text-align: left;
+        margin: 0 0 calc(20 / 375) * 100% calc(20 / 375) * 100%;
+        @include pc{
+            margin: 0 0 calc(20 / 505) * 100% 0;
+        }
+    }
+}
+.looks_2,.looks_4,.looks_6,.looks_8,.looks_10{
+    .look_num{
+        text-align: right;
+        margin: 0 calc(20 / 375) * 100% calc(20 / 375) * 100% 0;
+        @include pc{
+            text-align: left;
+            margin: 0 0 calc(20 / 505) * 100% 0;
+        }
+    }
+}
+
+.modal_btn{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: spFont(22);
+    z-index: 1000;
+    background: #fff;
+    text-align: center;
+    padding: spCalc(20) 0 ;
+    @include pc{
+        padding: pcCalc(30) 0 ;
+        font-size: pcFont(22);
+        .close{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: pcCalc(100);
+        }
+        .modal_items{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-right: pcCalc(100);
+        }
+
+    }
+}

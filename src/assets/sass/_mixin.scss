@@ -1,6 +1,6 @@
 // pcサイズ
 @mixin pc {
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 920px) {
     @content;
   }
 }
@@ -10,4 +10,26 @@
   @media screen and (max-width: 768px) {
     @content;
   }
+}
+
+
+@function spCalc($value){
+  @return calc($value / 750) * 100%;
+}
+@function pcCalc($value){
+  @return calc($value / 2735) * 100%;
+}
+@function pc($value){
+  @return calc($value / 2020) * 100%;
+}
+
+
+
+// fontsize
+
+@function spFont($value){
+  @return calc($value / 750 * 100vw);
+}
+@function pcFont($value){
+  @return calc($value / 2880 * 100vw);
 }

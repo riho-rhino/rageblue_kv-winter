@@ -1,0 +1,131 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.item{
+    display: flex;
+    vertical-align: bottom;
+
+    .itemph {
+        line-height: 0;
+    }
+    .item_price{
+        background: url(../img/bg.png);
+        background-repeat: repeat;
+        background-size: 100%;
+        color: c.$main;
+        font-size: spFont(20);
+        a{
+            color: c.$main;
+        }
+    }
+    @include pc{
+        .item_price{
+            font-size: pcFont(20);
+        }
+    }
+}
+
+.item_1{
+    display: flex;
+    align-items: flex-end;
+    vertical-align: bottom;
+    justify-content: center;
+    margin-top: spCalc(200);
+    .item_1-flex{
+        display: flex;
+        vertical-align: top;
+        align-items: flex-start;
+        width: spCalc(360);
+        justify-content: space-between;
+        margin-right: spCalc(10);
+        .item1-1{
+            width: calc(300 / 360) * 100%;
+        }
+        .item_price{
+            padding: calc(10 / 360) * 100%;
+            a{
+                writing-mode: vertical-rl;
+                line-height: 1;
+                border-left: solid c.$main 1px;
+            }
+        }
+    }
+    .item1-2{
+        width: spCalc(180);
+    }
+    @include pc{
+        margin-top: pc(300);
+        .item_1-flex{
+            width: pc(560);
+            margin-right: pc(10);
+            .item1-1{
+                width: calc(500 / 560) * 100%;
+            }
+            .item_price{
+                padding: 5px;
+            }
+        }
+        .item1-2{
+            width: pc(300);
+        }
+    }
+}
+
+.item_2{
+    display: flex;
+    justify-content: center;
+    gap: spCalc(50);
+    margin-top: spCalc(200);
+    .item_2-flex{
+        display: flex;
+        flex-direction: column;
+        vertical-align: middle;
+        align-items: center;
+        gap: 5px;
+        width: spCalc(300);
+        .item_price{
+            display: inline-block;
+            margin: 0 auto;
+            text-align: center;
+            padding: 5px;
+            a{
+                border-bottom: solid 1px c.$main;
+            }
+        }
+        
+    }
+    @include pc{
+        gap: pc(100);
+        .item_2-flex{
+            width: pc(600);
+        }
+    }
+}
+
+.item_3{
+    margin-top: spCalc(50);
+    .item_3-flex{
+        display: flex;
+        vertical-align: top;
+        align-items: flex-start;
+        .item3-1{
+            width: spCalc(300);
+        }
+    }
+    .item_price{
+        width: fit-content;
+        height: fit-content;
+        writing-mode: vertical-rl;
+        margin-left: 5px;
+        padding: 5px;
+    }
+    @include pc{
+        margin-top: pc(300);
+        .item_3-flex{
+            .item3-1{
+                width: pc(600);
+            }
+        }
+    }
+}

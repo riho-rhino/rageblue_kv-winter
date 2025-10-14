@@ -1,0 +1,40 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 500;
+    &_inner{
+        width: spCalc(710);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        vertical-align: middle;
+        margin: 0 auto;
+        padding: spCalc(20) 0;
+        
+        h1{
+            font-size: spCalc(22);
+            line-height: 1;
+        }
+        h2{
+            width: spCalc(149.99);
+            line-height: 0;
+        }
+        @include pc{
+            width: pcCalc(2535);
+            padding: pcCalc(30) 0;
+            h1{
+                font-size: pcCalc(22);
+            }
+            h2{
+                width: pcCalc(149.99);
+            }
+        }
+    }
+}

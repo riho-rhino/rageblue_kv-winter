@@ -1,0 +1,43 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.style_3{
+    margin-top: spCalc(100);
+    .style3-wrap{
+        display: flex;
+        position: relative;
+        .style-ph{
+            width: 50%;
+        }
+    }
+    .item_detail{
+        margin: spCalc(10) auto 0
+    }
+    @include pc{
+        margin-top: 0;
+        width: pc(800);
+        .style3-wrap{
+            display: block;
+            .style-ph{
+                width: 100%;
+            }
+        }
+        .style3-2{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+    }
+}
+
+.style3-bora-wrap{
+    @include pc{
+        margin-top: pc(300);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        vertical-align: top;
+    }
+}
