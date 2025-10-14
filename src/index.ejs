@@ -1,0 +1,15 @@
+<%
+  const serverURL = '/static/docs/lepsim/pages/2024spring'
+  const ENVType = process.env.NODE_ENV
+  rootURL = ENVType === 'production' ? serverURL : ''
+%>
+
+<% if(ENVType === 'development') {-%>
+<%- include('./_modules/_header.ejs') %>
+<%} -%>
+
+<%- include('./_modules/_contents.ejs') %>
+
+<% if(ENVType === 'development') {-%>
+<%- include('./_modules/_footer.ejs') %>
+<%} -%>
