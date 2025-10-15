@@ -33,22 +33,45 @@ body{
         display: block;
     }
 }
+.style-ph,.itemph{
+    overflow: hidden;
+    img{
+        opacity: 0;
+        transform: scale(1.1,1.1);
+    }
+    &.in{
+        img{
+        opacity: 1;
+        transform: scale(1,1);
+        }
+    }
+}
+.item_detail,.item_price{
+    opacity: 0;
+    transition: opacity .5s linear;
+    &.in{
+        opacity: 1;
+    }
+}
+
+.item_detail.fadein2{
+    transition-delay: .2s;
+}
+
+.fadein{
+    img{
+        transition: transform 1s linear, opacity .8s ease;
+    }
+}
+.fadein2{
+    img{
+        transition: transform 1s .2s linear, opacity .8s .2s ease;
+    }
+}
 
 a{
     cursor: pointer;
 }
-
-.fadein{
-    opacity: 0;
-    transform: translateY(30px);
-    transition: transform .4s ease, opacity .4s ease;
-    overflow: hidden;
-    &.in{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 
 .hel_l{
 font-family: "helvetica-lt-pro", sans-serif;

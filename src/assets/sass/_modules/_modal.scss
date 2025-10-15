@@ -2,9 +2,6 @@
 @use '../_mixin' as *;
 @use '../_common' as c;
 
-body{
-    overflow: hidden;
-}
 
 .modal{
     width: 100%;
@@ -15,6 +12,13 @@ body{
     background: #fff;
     z-index: 800;
     overflow-y: scroll;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s linear;
+    &.show{
+        opacity: 1;
+        pointer-events: all;
+    }
 
     .modal_looks{
         overflow: scroll;
@@ -22,6 +26,7 @@ body{
         flex-wrap: wrap;
         position: relative;
         z-index: 10;
+        margin-bottom: spCalc(50);
         li{
             width: 50%;
             margin-top: spCalc(40);
@@ -36,7 +41,7 @@ body{
     @include pc{
         .modal_looks{
             width: pcCalc(2020);
-            margin: 0 auto;
+            margin: 0 auto pcCalc(100);
             li{
                 width: calc(505 / 2020) * 100%;
                 margin-top: pcCalc(60);
@@ -87,6 +92,7 @@ body{
             top: 50%;
             transform: translateY(-50%);
             margin-left: pcCalc(100);
+            cursor: pointer;
         }
         .modal_items{
             position: absolute;
@@ -94,6 +100,10 @@ body{
             top: 50%;
             transform: translateY(-50%);
             margin-right: pcCalc(100);
+            cursor: pointer;
+            a{
+                color: #000;
+            }
         }
 
     }

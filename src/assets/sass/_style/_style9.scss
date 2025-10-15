@@ -17,6 +17,14 @@
             position: absolute;
             top: 0;
             left: 0;
+            img{
+                opacity: 0;
+            }
+            &.move{
+                img{
+                    animation: opacity 8s linear infinite;
+                }
+            }
         }
     }
     @include pc{
@@ -33,6 +41,18 @@
             display: flex;
             .style9-2{
                 position: inherit;
+                img{
+                    opacity: 0;
+                    transform: scale(1.1,1.1);
+                    transition: transform 1s .2s linear, opacity .8s .2s ease;
+                }
+                &.move{
+                    img{
+                        opacity: 1;
+                        transform: scale(1,1);
+                        animation: none!important;
+                    }
+                }
             }
         }
     }

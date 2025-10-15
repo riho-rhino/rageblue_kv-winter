@@ -14,6 +14,18 @@
     }   
     .style6-1{
         width: spCalc(550); 
+        position: relative;
+        .second{
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        &.in{
+            .second{
+                animation: opacity 8s linear infinite;
+            }
+        }
     }
     .item_detail{
         width: 55px;
@@ -26,18 +38,26 @@
             }
         }
     }
-    .style6-2{
+    .style6-3{
         position: absolute;
         width: spCalc(180);
         top: 0;
         right: 0;
+        // img{
+        //     opacity: 0;
+        // }
+        // &.move{
+        //     img{
+        //             animation: opacity 8s linear infinite;
+        //     }
+        // }
     }
     @include pc{
         margin-top: pc(300);
         .style6-1{
             width: pc(800); 
         }
-        .style6-2{
+        .style6-3{
             width: pc(300); 
         }
     }

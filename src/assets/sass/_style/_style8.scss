@@ -11,6 +11,14 @@
             position: absolute;
             top: 0;
             left: 0;
+            img{
+                opacity: 0;
+            }
+            &.move{
+                img{
+                    animation: opacity 8s linear infinite;
+                }
+            }
         }
     }   
     .item_detail{

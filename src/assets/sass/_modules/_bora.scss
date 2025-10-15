@@ -8,6 +8,13 @@
     .bora{
         line-height: 0;
         width: 80px;
+        opacity: 0;
+        transition: all .5s linear;
+    }
+    &.move{
+        .bora{
+            opacity: 1;
+        }
     }
     @include pc{
         .bora{
@@ -33,23 +40,36 @@
         }
         .bora_2{
             margin-top: pc(21);
+            transition-delay: .5s;
+        }
+        .bora_3{
+            transition-delay: .25s;
         }
     }
+
 }
 
 .bora-wrap_2{
     margin: spCalc(200) spCalc(40) 0 0;
     justify-content: right;
 
-    .bora_1{
-        margin-right: spCalc(29);
+    .bora_4{
+        margin-right: spCalc(-29);
+        margin-top: spCalc(39);
+        
     }
-    .bora_2{
-        margin-top: spCalc(27);
+    .bora_5{
+        margin-right: spCalc(13);
+        transition-delay: .5s;
+    }
+    .bora_6{
+        transition-delay: .25s;
+        margin-top: spCalc(63);
     }
     @include pc{
         margin: pc(342) 0 0 0;
     }
+    
 }
 
 .bora-wrap_3{
@@ -57,9 +77,11 @@
     justify-content: right;
     .bora_7{
         margin-right: spCalc(30);   
+        transition-delay: .25s;
     }
     .bora_8{
         margin-top: spCalc(27);
+        transition-delay: .5s;
     }
     @include pc{
         margin: pc(200) 0 0 0;
@@ -80,6 +102,10 @@
     }
     .bora_11{
         margin-right: spCalc(13);   
+        transition-delay: .5s;
+    }
+    .bora_12{
+        transition-delay: .25s;
     }
     @include pc{
         margin: pc(300) auto 0;
@@ -101,12 +127,15 @@
     justify-content: right;
     .bora_13{
         margin: spCalc(113) spCalc(-33) 0 0;
+        
     }
     .bora_14{
         margin-right: spCalc(-38);
+        transition-delay: .25s;
     }
     .bora_15{
         margin-top: spCalc(51);
+        transition-delay: .5s;
     }
     @include pc{
         margin: pc(200) 0 0 auto;
@@ -131,6 +160,10 @@
     }
     .bora_17{
         margin-top: spCalc(26);
+        transition-delay: .25s;
+    }
+    .bora_18{
+        transition-delay: .5s;
     }
     @include pc{
         margin-top: pc(300);
@@ -148,9 +181,11 @@
     justify-content: center;
     .bora_19{
         margin-right: spCalc(30);
+        transition-delay: .5s;
     }
     .bora_20{
         margin-top: spCalc(26);
+        transition-delay: .25s;
     }
     @include pc{
         margin-top: pc(300);
@@ -173,11 +208,13 @@
         margin-right: spCalc(-20);
         position: relative;
         z-index: 5;
+        transition-delay: .5s;
     }
     .bora_24{
         margin-top: spCalc(50);
         position: relative;
         z-index: 1;
+        transition-delay: .25s;
     }
     @include pc{
         margin-right: pc(254);
@@ -200,6 +237,7 @@
     margin: spCalc(210) 0 spCalc(200);
     .bora_25{
         margin-top: spCalc(24);
+        transition-delay: .25s;
     }
     @include pc{
         margin: pc(300) 0;

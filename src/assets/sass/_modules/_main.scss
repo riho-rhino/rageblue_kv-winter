@@ -5,6 +5,7 @@
 .style{
     .style-ph{
         line-height: 0;
+        overflow: hidden;
     }
 }
 
@@ -31,5 +32,24 @@
     @include pc{
         width: pcCalc(2020);
         margin: 0 auto;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }

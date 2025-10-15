@@ -41,3 +41,25 @@
         vertical-align: top;
     }
 }
+
+.style3-2{
+    img{
+        opacity: 0;
+        transform: scale(1.1,1.1);
+        transition: transform 1s .2s linear, opacity .8s .2s ease;
+    }
+    &.move{
+        img{
+            opacity: 1;
+            transform: scale(1,1);
+        }
+    }
+    @include pc{
+        transform: scale(1,1);
+        &.move{
+            img{
+                animation: opacity 8s linear infinite;
+            }
+        }
+    }
+}

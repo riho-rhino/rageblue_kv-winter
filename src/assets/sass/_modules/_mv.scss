@@ -9,7 +9,28 @@
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
+  z-index: 1500;
+  opacity: 1;
+  pointer-events: none;
+  background: #fff;
+  transition: all .8s linear;
+  &.show{
+    .pc_left,.pc_right{
+      opacity: 1;
+      img{
+          transform: scale(1,1);
+        }
+    }
+    .sp_mv{
+      .mv_1,.mv_2{
+        opacity: 1;
+        
+      }
+    }
+  }
+  &.hidden{
+    opacity: 0;
+  }
 }
 
 .pc_mv{
@@ -22,11 +43,20 @@
     line-height: 0;
     width: 50%;
     position: relative;
+    opacity: 0;
+    transition: opacity 1s linear;
+    overflow: hidden;
     img{
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transform: scale(1.05,1.05);
+      transition: transform 2s linear;
     }
+  }
+  .pcmv{
+    position: relative;
+    z-index: 10;
   }
 }
 
@@ -37,6 +67,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  z-index: 20;
   margin: 0{
     top: calc(60 / 1367) * 100%;
     right: calc(60 / 1367) * 100%;
@@ -63,11 +94,16 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0;
+    transition: all .5s linear;
   }
+  
   .mv_2{
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
+    transition-delay: 1.5s;
   }
 
   .sp_txt-wrap{
@@ -95,3 +131,18 @@
 
 
 
+.animated-text{
+  opacity: 0;
+  transition: all .2s ease;
+  &.show{
+    opacity: 1;
+  }
+}
+
+.mv_logo{
+  opacity: 0;
+  transition: all 1s ease;
+  &.show{
+    opacity: 1;
+  }
+}
